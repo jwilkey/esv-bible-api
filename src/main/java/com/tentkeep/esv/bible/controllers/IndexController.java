@@ -5,10 +5,7 @@ import com.tentkeep.esv.bible.models.PassageQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class IndexController {
@@ -20,6 +17,7 @@ public class IndexController {
     }
 
     @RequestMapping(value = "/search/{query}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    @CrossOrigin
     @ResponseBody
     public PassageQuery search(@RequestHeader("x-esv-api-key") String esvApiKey, @PathVariable("query") String query) throws Exception {
         return esvHelper.fetch(esvApiKey, query);

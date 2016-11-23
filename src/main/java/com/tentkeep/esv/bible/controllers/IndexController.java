@@ -14,6 +14,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class IndexController {
     @Autowired private EsvHelper esvHelper;
 
+    @RequestMapping("/")
+    public String index() {
+        return "home";
+    }
+
     @RequestMapping(value = "/search/{query}", produces = {MediaType.APPLICATION_JSON_VALUE})
     @ResponseBody
     public PassageQuery search(@RequestHeader("x-esv-api-key") String esvApiKey, @PathVariable("query") String query) throws Exception {

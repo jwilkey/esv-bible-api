@@ -1,5 +1,6 @@
 package com.tentkeep.esv.bible.models;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
@@ -17,12 +18,33 @@ public class PassageQuery {
     @Element(name = "copyright")
     private String copyright;
 
+    @JsonSerialize private boolean showParagraphMarkings;
+    @JsonSerialize private boolean showWordsOfChristMarkings;
+    @JsonSerialize private boolean showFootnotes;
+    @JsonSerialize private boolean showFormatting;
+
     public Passage getPassage() {
         return passage;
     }
 
     public String getCopyright() {
         return copyright;
+    }
+
+    public boolean showParagraphMarkings() {
+        return this.showParagraphMarkings;
+    }
+
+    public boolean showWordsOfChristMarkings() {
+        return this.showWordsOfChristMarkings;
+    }
+
+    public boolean showFootnotes() {
+        return this.showFootnotes;
+    }
+
+    public boolean showFormatting() {
+        return this.showFormatting;
     }
 
     @Root(strict = false)

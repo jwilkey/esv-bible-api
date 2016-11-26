@@ -1,0 +1,39 @@
+<!DOCTYPE crossway-bible SYSTEM "http://www.gnpcb.org/esv/share/schemas/crossway.base.entities.dtd">
+<crossway-bible class="passage-query">
+    <passage>
+        <reference>Matthew 9:1-4</reference>
+        <surrounding-chapters>
+            <previous>Matthew 8</previous>
+            <current>Matthew 9</current>
+            <next>Matthew 10</next>
+        </surrounding-chapters>
+        <content>
+            <verse-unit unit-id="40009001">
+                <marker class="begin-verse" mid="v40009001"/>
+                <begin-chapter num="9"/>
+                <heading>Jesus Heals a Paralytic</heading>
+                <begin-paragraph/>
+                <verse-num begin-chapter="9">1</verse-num>And getting into a boat he crossed over and came to his own city.
+            </verse-unit>
+            <verse-unit unit-id="40009002">
+                <marker class="begin-verse" mid="v40009002"/>
+                <verse-num>2</verse-num>And behold, some people brought to him a paralytic, lying on a bed. And when Jesus saw their faith, he said to the paralytic,
+                <woc>&ldblquot;Take heart, my son; your sins are forgiven.&rdblquot;</woc>
+            </verse-unit>
+            <verse-unit unit-id="40009003">
+                <marker class="begin-verse" mid="v40009003"/>
+                <verse-num>3</verse-num>And behold, some of the scribes said to themselves, &ldblquot;This man is blaspheming.&rdblquot;
+            </verse-unit>
+            <verse-unit unit-id="40009004">
+                <marker class="begin-verse" mid="v40009004"/>
+                <verse-num>4</verse-num>But Jesus, knowing
+                <footnote id="f1">Some manuscripts
+                    <i>perceiving</i>
+                </footnote> their thoughts, said,
+                <woc>&ldblquot;Why do you think evil in your hearts?</woc>
+                <end-paragraph/>
+            </verse-unit>
+        </content>
+    </passage>
+    <copyright>The Holy Bible, English Standard Version copyright (c)2001 by Crossway Bibles, a division of Good News Publishers. Used by permission. All rights reserved. http://www.esv.org</copyright>
+</crossway-bible>

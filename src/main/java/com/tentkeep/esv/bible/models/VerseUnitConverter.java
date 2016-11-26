@@ -14,15 +14,42 @@ public class VerseUnitConverter implements Converter<PassageQuery.Passage.VerseU
         final StringBuilder sb = new StringBuilder(1024);
         readVerseUnitNode(sb, node, verseUnit);
 
-        String text = sb.toString().trim();
-        text.replace("&ldblquot;", "\"");
-        text.replace("&rdblquot;", "\"");
-        text.replace("&lquot;", "'");
-        text.replace("&rquot;", "'");
-        text.replace("&emdash;", "—");
+        String text = generateText(sb);
         verseUnit.setText(text);
 
         return verseUnit;
+    }
+
+    private String generateText(StringBuilder sb) {
+        String text = sb.toString();
+
+        text = text.replaceAll("“", "\"");
+        text = text.replaceAll("”", "\"");
+
+        text = removeNode("bp", text, false);
+        text = removeNode("ep", text, false);
+
+        text = removeNode("woc", text, true);
+
+        text = removeNode("f", text, false);
+
+        text = text.trim();
+
+        // formatting
+        text = text.replaceAll("[ ]{2,}", " ");
+        text = text.replaceAll("\n", "");
+
+        return text;
+    }
+
+    private String removeNode(String nodeName, String text, boolean keepContents) {
+        if (keepContents) {
+            String temp = text.replaceAll("<" + nodeName + ">", "");
+            return temp.replaceAll("</" + nodeName + ">", "");
+        } else {
+            String regex = "<" + nodeName + ">*.</" + nodeName + ">";
+            return text.replaceAll(regex, "");
+        }
     }
 
     @Override
@@ -44,18 +71,13 @@ public class VerseUnitConverter implements Converter<PassageQuery.Passage.VerseU
         }
 
         if ("footnote".equals(root.getName())) {
-            String footnoteId = root.getAttribute("id").getValue().replace("f", "");
-            sb.append("<f>").append(footnoteId).append("</f>");
-
-            StringBuilder footnoteSb = new StringBuilder();
-            concatNodesTree(footnoteSb, root, false);
-            verseUnit.getFootnotes().add(new PassageQuery.Passage.VerseUnit.Footnote(footnoteId,footnoteSb.toString()));
+            readFootnote(sb, root, verseUnit);
             return;
         }
 
         List<String> ignoreNodeNames = Arrays.asList("verse-unit");
         if (root.isElement() && !ignoreNodeNames.contains(root.getName())) {
-            System.out.println("ROOT: " + root.getName());
+//            System.out.println("ROOT: " + root.getName());
             sb.append("<").append(getNodeName(root.getName())).append(">");
         }
 
@@ -74,6 +96,15 @@ public class VerseUnitConverter implements Converter<PassageQuery.Passage.VerseU
         if (root.isElement() && !ignoreNodeNames.contains(root.getName())) {
             sb.append("</").append(getNodeName(root.getName())).append(">");
         }
+    }
+
+    private void readFootnote(StringBuilder sb, InputNode root, PassageQuery.Passage.VerseUnit verseUnit) throws Exception {
+        String footnoteId = root.getAttribute("id").getValue().replace("f", "");
+        sb.append("<f>").append(footnoteId).append("</f>");
+
+        StringBuilder footnoteSb = new StringBuilder();
+        concatNodesTree(footnoteSb, root, false);
+        verseUnit.getFootnotes().add(new PassageQuery.Passage.VerseUnit.Footnote(footnoteId,footnoteSb.toString()));
     }
 
     private String getNodeName(String xmlName) {

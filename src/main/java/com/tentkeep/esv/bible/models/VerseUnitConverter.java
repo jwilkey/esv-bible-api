@@ -11,74 +11,68 @@ public class VerseUnitConverter implements Converter<PassageQuery.Passage.VerseU
     @Override
     public PassageQuery.Passage.VerseUnit read(InputNode node) throws Exception {
         PassageQuery.Passage.VerseUnit verseUnit = new PassageQuery.Passage.VerseUnit();
-        final StringBuilder sb = new StringBuilder(1024);
-        readVerseUnitNode(sb, node, verseUnit);
 
-        String text = generateText(sb);
-        verseUnit.setText(text);
+        final StringBuilder sb = new StringBuilder();
+        readVerseUnitNode(sb, node, verseUnit, true);
+        verseUnit.setText(sb.toString());
 
         return verseUnit;
-    }
-
-    private String generateText(StringBuilder sb) {
-        String text = sb.toString();
-
-        text = text.replaceAll("“", "\"");
-        text = text.replaceAll("”", "\"");
-
-        text = removeNode("bp", text, false);
-        text = removeNode("ep", text, false);
-
-        text = removeNode("woc", text, true);
-
-        text = removeNode("f", text, false);
-
-        text = text.trim();
-
-        // formatting
-        text = text.replaceAll("[ ]{2,}", " ");
-        text = text.replaceAll("\n", "");
-
-        return text;
-    }
-
-    private String removeNode(String nodeName, String text, boolean keepContents) {
-        if (keepContents) {
-            String temp = text.replaceAll("<" + nodeName + ">", "");
-            return temp.replaceAll("</" + nodeName + ">", "");
-        } else {
-            String regex = "<" + nodeName + ">*.</" + nodeName + ">";
-            return text.replaceAll(regex, "");
-        }
     }
 
     @Override
     public void write(OutputNode node, PassageQuery.Passage.VerseUnit value) throws Exception {
     }
 
-    private void readVerseUnitNode(StringBuilder sb, InputNode root, PassageQuery.Passage.VerseUnit verseUnit) throws Exception {
-        List<String> ignoreNodes = Arrays.asList("marker", "begin-chapter");
+    private void readVerseUnitNode(StringBuilder sb, InputNode root, PassageQuery.Passage.VerseUnit verseUnit, boolean ignoreRootNodeName) throws Exception {
+        List<String> ignoreNodes = Arrays.asList("marker", "begin-chapter", "end-chapter", "begin-block-indent", "end-block-indent", "end-line");
         if (ignoreNodes.contains(root.getName())) return;
 
-        if ("verse-num".equals(root.getName())) {
-            verseUnit.setNumber(Integer.parseInt(root.getValue()));
-            return;
+        if (!ignoreRootNodeName) {
+            if ("verse-num".equals(root.getName())) {
+                verseUnit.setNumber(Integer.parseInt(root.getValue()));
+                return;
+            }
+
+            if ("heading".equals(root.getName())) {
+                verseUnit.setHeading(root.getValue());
+                return;
+            }
+
+            if ("subheading".equals(root.getName())) {
+                StringBuilder shBuilder = new StringBuilder();
+                readVerseUnitNode(shBuilder, root, verseUnit, true);
+                verseUnit.setSubheading(shBuilder.toString().trim());
+                return;
+            }
+
+            if ("footnote".equals(root.getName())) {
+                readFootnote(sb, root, verseUnit);
+                return;
+            }
+
+            if ("span".equals(root.getName())) {
+                if ("divine-name".equals(root.getAttribute("esvApiClass").getValue())) {
+                    sb.append(root.getValue().toUpperCase());
+                    return;
+                }
+            }
+
+            if ("begin-line".equals(root.getName())) {
+                sb.append("\n");
+                InputNode beginLineClass = root.getAttribute("esvApiClass");
+                if (beginLineClass != null && "indent".equals(beginLineClass.getValue())) {
+                    sb.append(" ");
+                }
+                return;
+            }
         }
 
-        if ("heading".equals(root.getName())) {
-            verseUnit.setHeading(root.getValue());
-            return;
-        }
+        String nodeName = getNodeName(root.getName());
+        boolean shouldAppendNodeTag = shouldAppendNodeTag(root, ignoreRootNodeName, nodeName);
 
-        if ("footnote".equals(root.getName())) {
-            readFootnote(sb, root, verseUnit);
-            return;
-        }
-
-        List<String> ignoreNodeNames = Arrays.asList("verse-unit");
-        if (root.isElement() && !ignoreNodeNames.contains(root.getName())) {
+        if (shouldAppendNodeTag) {
 //            System.out.println("ROOT: " + root.getName());
-            sb.append("<").append(getNodeName(root.getName())).append(">");
+            sb.append("<").append(nodeName).append(">");
         }
 
         String value = root.getValue();
@@ -86,16 +80,20 @@ public class VerseUnitConverter implements Converter<PassageQuery.Passage.VerseU
 
         InputNode node = root.getNext();
         while (node != null) {
-            readVerseUnitNode(sb, node, verseUnit);
+            readVerseUnitNode(sb, node, verseUnit, false);
             // Each time a sub-tree is 'over', getValue() will deserialize the potentially upcoming free-text
             value = root.getValue();
             if (value != null) sb.append(value);
             node = root.getNext();
         }
 
-        if (root.isElement() && !ignoreNodeNames.contains(root.getName())) {
-            sb.append("</").append(getNodeName(root.getName())).append(">");
+        if (shouldAppendNodeTag) {
+            sb.append("</").append(nodeName).append(">");
         }
+    }
+
+    private boolean shouldAppendNodeTag(InputNode root, boolean ignoreRootNodeName, String nodeName) {
+        return root.isElement() && !ignoreRootNodeName && nodeName != null;
     }
 
     private void readFootnote(StringBuilder sb, InputNode root, PassageQuery.Passage.VerseUnit verseUnit) throws Exception {
@@ -111,6 +109,7 @@ public class VerseUnitConverter implements Converter<PassageQuery.Passage.VerseU
         switch (xmlName) {
             case "begin-paragraph": return "bp";
             case "end-paragraph": return "ep";
+            case "selah": return null;
             default: return xmlName;
         }
     }

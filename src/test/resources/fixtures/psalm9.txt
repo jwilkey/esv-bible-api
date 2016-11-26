@@ -1,0 +1,123 @@
+<!DOCTYPE crossway-bible SYSTEM "http://www.gnpcb.org/esv/share/schemas/crossway.base.entities.dtd">
+<crossway-bible class="passage-query">
+<passage>
+  <reference>Psalm 9</reference>
+  <surrounding-chapters>
+    <previous>Psalm 8</previous>
+    <current class="full-chapter">Psalm 9</current>
+    <next>Psalm 10</next>
+  </surrounding-chapters>
+  <content>
+<verse-unit unit-id="19009001"><marker class="begin-verse" mid="v19009001"/>
+<begin-chapter num="9"/><heading>I Will Recount Your Wonderful Deeds</heading><subheading class="psalm-title"><footnote id="f1">Psalms 9 and 10 together follow an acrostic pattern, each stanza beginning with the successive letters of the Hebrew alphabet. In the Septuagint they form one psalm</footnote> To the choirmaster: according to Muth-labben.<footnote id="f2">Probably a musical or liturgical term</footnote> A Psalm of David.</subheading>
+<begin-block-indent/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num begin-chapter="9">1</verse-num>I will give thanks to the <span class="divine-name">Lord</span> with my whole heart;<end-line class="br"/>
+<begin-line class="indent"/>I will recount all of your wonderful deeds.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19009002"><marker class="begin-verse" mid="v19009002"/>
+<begin-line/><verse-num>2</verse-num>I will be glad and exult in you;<end-line class="br"/>
+<begin-line class="indent"/>I will sing praise to your name, O Most High.<end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19009003"><marker class="begin-verse" mid="v19009003"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>3</verse-num>When my enemies turn back,<end-line class="br"/>
+<begin-line class="indent"/>they stumble and perish before<footnote id="f3">Or <i>because of</i></footnote> your presence.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19009004"><marker class="begin-verse" mid="v19009004"/>
+<begin-line/><verse-num>4</verse-num>For you have maintained my just cause;<end-line class="br"/>
+<begin-line class="indent"/>you have sat on the throne, giving righteous judgment.<end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19009005"><marker class="begin-verse" mid="v19009005"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>5</verse-num>You have rebuked the nations; you have made the wicked perish;<end-line class="br"/>
+<begin-line class="indent"/>you have blotted out their name forever and ever.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19009006"><marker class="begin-verse" mid="v19009006"/>
+<begin-line/><verse-num>6</verse-num>The enemy came to an end in everlasting ruins;<end-line class="br"/>
+<begin-line class="indent"/>their cities you rooted out;<end-line class="br"/>
+<begin-line class="indent"/>the very memory of them has perished.<end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19009007"><marker class="begin-verse" mid="v19009007"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>7</verse-num>But the <span class="divine-name">Lord</span> sits enthroned forever;<end-line class="br"/>
+<begin-line class="indent"/>he has established his throne for justice,<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19009008"><marker class="begin-verse" mid="v19009008"/>
+<begin-line/><verse-num>8</verse-num>and he judges the world with righteousness;<end-line class="br"/>
+<begin-line class="indent"/>he judges the peoples with uprightness.<end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19009009"><marker class="begin-verse" mid="v19009009"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>9</verse-num>The <span class="divine-name">Lord</span> is a stronghold for the oppressed,<end-line class="br"/>
+<begin-line class="indent"/>a stronghold in times of trouble.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19009010"><marker class="begin-verse" mid="v19009010"/>
+<begin-line/><verse-num>10</verse-num>And those who know your name put their trust in you,<end-line class="br"/>
+<begin-line class="indent"/>for you, O <span class="divine-name">Lord</span>, have not forsaken those who seek you.<end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19009011"><marker class="begin-verse" mid="v19009011"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>11</verse-num>Sing praises to the <span class="divine-name">Lord</span>, who sits enthroned in Zion!<end-line class="br"/>
+<begin-line class="indent"/>Tell among the peoples his deeds!<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19009012"><marker class="begin-verse" mid="v19009012"/>
+<begin-line/><verse-num>12</verse-num>For he who avenges blood is mindful of them;<end-line class="br"/>
+<begin-line class="indent"/>he does not forget the cry of the afflicted.<end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19009013"><marker class="begin-verse" mid="v19009013"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>13</verse-num>Be gracious to me, O <span class="divine-name">Lord</span>!<end-line class="br"/>
+<begin-line class="indent"/>See my affliction from those who hate me,<end-line class="br"/>
+<begin-line class="indent"/>O you who lift me up from the gates of death,<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19009014"><marker class="begin-verse" mid="v19009014"/>
+<begin-line/><verse-num>14</verse-num>that I may recount all your praises,<end-line class="br"/>
+<begin-line class="indent"/>that in the gates of the daughter of Zion<end-line class="br"/>
+<begin-line class="indent"/>I may rejoice in your salvation.<end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19009015"><marker class="begin-verse" mid="v19009015"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>15</verse-num>The nations have sunk in the pit that they made;<end-line class="br"/>
+<begin-line class="indent"/>in the net that they hid, their own foot has been caught.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19009016"><marker class="begin-verse" mid="v19009016"/>
+<begin-line/><verse-num>16</verse-num>The <span class="divine-name">Lord</span> has made himself known; he has executed judgment;<end-line class="br"/>
+<begin-line class="indent"/>the wicked are snared in the work of their own hands. <selah>Higgaion.<footnote id="f4">Probably a musical or liturgical term</footnote> Selah</selah><end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19009017"><marker class="begin-verse" mid="v19009017"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>17</verse-num>The wicked shall return to Sheol,<end-line class="br"/>
+<begin-line class="indent"/>all the nations that forget God.<end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19009018"><marker class="begin-verse" mid="v19009018"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>18</verse-num>For the needy shall not always be forgotten,<end-line class="br"/>
+<begin-line class="indent"/>and the hope of the poor shall not perish forever.<end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19009019"><marker class="begin-verse" mid="v19009019"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>19</verse-num>Arise, O <span class="divine-name">Lord</span>! Let not man prevail;<end-line class="br"/>
+<begin-line class="indent"/>let the nations be judged before you!<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19009020"><marker class="begin-verse" mid="v19009020"/>
+<begin-line/><verse-num>20</verse-num>Put them in fear, O <span class="divine-name">Lord</span>!<end-line class="br"/>
+<begin-line class="indent"/>Let the nations know that they are but men! <selah>Selah</selah><end-line/>
+<end-paragraph/>
+<end-block-indent/>
+<end-chapter/>
+</verse-unit>
+  </content>
+</passage>
+<copyright>The Holy Bible, English Standard Version copyright (c)2001 by Crossway Bibles, a division of Good News Publishers. Used by permission. All rights reserved. http://www.esv.org</copyright>
+</crossway-bible>

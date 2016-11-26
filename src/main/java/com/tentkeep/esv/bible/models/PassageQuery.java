@@ -1,6 +1,5 @@
 package com.tentkeep.esv.bible.models;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
@@ -18,10 +17,7 @@ public class PassageQuery {
     @Element(name = "copyright")
     private String copyright;
 
-    @JsonSerialize private boolean showParagraphMarkings;
-    @JsonSerialize private boolean showWordsOfChristMarkings;
-    @JsonSerialize private boolean showFootnotes;
-    @JsonSerialize private boolean showFormatting;
+    private VerseOptions options;
 
     public Passage getPassage() {
         return passage;
@@ -31,20 +27,12 @@ public class PassageQuery {
         return copyright;
     }
 
-    public boolean showParagraphMarkings() {
-        return this.showParagraphMarkings;
+    public VerseOptions getOptions() {
+        return options;
     }
 
-    public boolean showWordsOfChristMarkings() {
-        return this.showWordsOfChristMarkings;
-    }
-
-    public boolean showFootnotes() {
-        return this.showFootnotes;
-    }
-
-    public boolean showFormatting() {
-        return this.showFormatting;
+    public void setOptions(VerseOptions options) {
+        this.options = options;
     }
 
     @Root(strict = false)
@@ -70,6 +58,7 @@ public class PassageQuery {
             private int number;
             private String text;
             private String heading;
+            private String subheading;
             private List<Footnote> footnotes;
 
             public VerseUnit() {
@@ -100,8 +89,16 @@ public class PassageQuery {
                 this.heading = heading;
             }
 
+            public String getSubheading() {
+                return subheading;
+            }
+
             public List<Footnote> getFootnotes() {
                 return this.footnotes;
+            }
+
+            public void setSubheading(String subheading) {
+                this.subheading = subheading;
             }
 
             public static class Footnote {

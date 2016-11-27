@@ -1,0 +1,83 @@
+<!DOCTYPE crossway-bible SYSTEM "http://www.gnpcb.org/esv/share/schemas/crossway.base.entities.dtd">
+<crossway-bible class="passage-query">
+<passage>
+  <reference>Psalm 41</reference>
+  <surrounding-chapters>
+    <previous>Psalm 40</previous>
+    <current class="full-chapter">Psalm 41</current>
+    <next>Psalm 42</next>
+  </surrounding-chapters>
+  <content>
+<verse-unit unit-id="19041001"><marker class="begin-verse" mid="v19041001"/>
+<begin-chapter num="41"/><heading>O <span class="divine-name">Lord</span>, Be Gracious to Me</heading><subheading class="psalm-title">To the choirmaster. A Psalm of David.</subheading>
+<begin-block-indent/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num begin-chapter="41">1</verse-num>Blessed is the one who considers the poor!<footnote id="f1">Or <i>weak</i></footnote><end-line class="br"/>
+<begin-line class="indent"/>In the day of trouble the <span class="divine-name">Lord</span> delivers him;<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19041002"><marker class="begin-verse" mid="v19041002"/>
+<begin-line/><verse-num>2</verse-num>the <span class="divine-name">Lord</span> protects him and keeps him alive;<end-line class="br"/>
+<begin-line class="indent"/>he is called blessed in the land;<end-line class="br"/>
+<begin-line class="indent"/>you do not give him up to the will of his enemies.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19041003"><marker class="begin-verse" mid="v19041003"/>
+<begin-line/><verse-num>3</verse-num>The <span class="divine-name">Lord</span> sustains him on his sickbed;<end-line class="br"/>
+<begin-line class="indent"/>in his illness you restore him to full health.<footnote id="f2">Hebrew <i>you turn all his bed</i></footnote><end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19041004"><marker class="begin-verse" mid="v19041004"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>4</verse-num>As for me, I said, &ldblquot;O <span class="divine-name">Lord</span>, be gracious to me;<end-line class="br"/>
+<begin-line class="indent"/>heal me,<footnote id="f3">Hebrew <i>my soul</i></footnote> for I have sinned against you!&rdblquot;<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19041005"><marker class="begin-verse" mid="v19041005"/>
+<begin-line/><verse-num>5</verse-num>My enemies say of me in malice,<end-line class="br"/>
+<begin-line class="indent"/>&ldblquot;When will he die, and his name perish?&rdblquot;<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19041006"><marker class="begin-verse" mid="v19041006"/>
+<begin-line/><verse-num>6</verse-num>And when one comes to see me, he utters empty words,<end-line class="br"/>
+<begin-line class="indent"/>while his heart gathers iniquity;<end-line class="br"/>
+<begin-line class="indent"/>when he goes out, he tells it abroad.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19041007"><marker class="begin-verse" mid="v19041007"/>
+<begin-line/><verse-num>7</verse-num>All who hate me whisper together about me;<end-line class="br"/>
+<begin-line class="indent"/>they imagine the worst for me.<footnote id="f4">Or <i>they devise evil against me</i></footnote><end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19041008"><marker class="begin-verse" mid="v19041008"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>8</verse-num>They say, &ldblquot;A deadly thing is poured out<footnote id="f5">Or <i>has fastened</i></footnote> on him;<end-line class="br"/>
+<begin-line class="indent"/>he will not rise again from where he lies.&rdblquot;<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19041009"><marker class="begin-verse" mid="v19041009"/>
+<begin-line/><verse-num>9</verse-num>Even my close friend in whom I trusted,<end-line class="br"/>
+<begin-line class="indent"/>who ate my bread, has lifted his heel against me.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19041010"><marker class="begin-verse" mid="v19041010"/>
+<begin-line/><verse-num>10</verse-num>But you, O <span class="divine-name">Lord</span>, be gracious to me,<end-line class="br"/>
+<begin-line class="indent"/>and raise me up, that I may repay them!<end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19041011"><marker class="begin-verse" mid="v19041011"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>11</verse-num>By this I know that you delight in me:<end-line class="br"/>
+<begin-line class="indent"/>my enemy will not shout in triumph over me.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="19041012"><marker class="begin-verse" mid="v19041012"/>
+<begin-line/><verse-num>12</verse-num>But you have upheld me because of my integrity,<end-line class="br"/>
+<begin-line class="indent"/>and set me in your presence forever.<end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="19041013"><marker class="begin-verse" mid="v19041013"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>13</verse-num>Blessed be the <span class="divine-name">Lord</span>, the God of Israel,<end-line class="br"/>
+<begin-line class="indent"/>from everlasting to everlasting!<end-line class="br"/>
+<begin-line class="psalm-doxology"/>Amen and Amen.<end-line/>
+<end-paragraph/>
+<end-block-indent/>
+<end-chapter/>
+</verse-unit>
+  </content>
+</passage>
+<copyright>The Holy Bible, English Standard Version copyright (c)2001 by Crossway Bibles, a division of Good News Publishers. Used by permission. All rights reserved. http://www.esv.org</copyright>
+</crossway-bible>

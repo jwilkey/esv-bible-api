@@ -34,7 +34,9 @@ public class VerseUnitConverter implements Converter<PassageQuery.Passage.VerseU
             }
 
             if ("heading".equals(root.getName())) {
-                verseUnit.setHeading(root.getValue());
+                StringBuilder hBuilder = new StringBuilder();
+                readVerseUnitNode(hBuilder, root, verseUnit, true);
+                verseUnit.setHeading(hBuilder.toString().trim());
                 return;
             }
 
@@ -60,8 +62,11 @@ public class VerseUnitConverter implements Converter<PassageQuery.Passage.VerseU
             if ("begin-line".equals(root.getName())) {
                 sb.append("\n");
                 InputNode beginLineClass = root.getAttribute("esvApiClass");
-                if (beginLineClass != null && "indent".equals(beginLineClass.getValue())) {
-                    sb.append(" ");
+                if (beginLineClass != null) {
+                    String beginLineValue = beginLineClass.getValue();
+                    if ("indent".equals(beginLineValue) || "psalm-doxology".equals(beginLineValue)) {
+                        sb.append(" ");
+                    }
                 }
                 return;
             }

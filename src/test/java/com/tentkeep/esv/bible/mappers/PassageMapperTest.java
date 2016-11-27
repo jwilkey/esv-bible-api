@@ -17,7 +17,7 @@ public class PassageMapperTest {
 
     @Test
     public void map_matthew9_noOptions() throws Exception {
-        PassageQuery actual = subject.map(loadFixture("matt9.xml"));
+        PassageQuery actual = subject.map(loadFixture("matt9.txt"));
 
         assertEquals("Matthew 9:1-4", actual.getPassage().getReference());
         assertEquals(4, actual.getPassage().getVerses().size());

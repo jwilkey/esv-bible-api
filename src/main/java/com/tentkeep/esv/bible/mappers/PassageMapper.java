@@ -43,6 +43,7 @@ public class PassageMapper {
 
         // formatting
         text = text.replaceAll("\n", "");
+        text = text.replaceAll("\t", " ");
         text = text.replaceAll("[ ]{2,}", " ");
 
         return text;

@@ -64,9 +64,13 @@ public class VerseUnitConverter implements Converter<PassageQuery.Passage.VerseU
                 InputNode beginLineClass = root.getAttribute("esvApiClass");
                 if (beginLineClass != null) {
                     String beginLineValue = beginLineClass.getValue();
-                    if ("indent".equals(beginLineValue) || "psalm-doxology".equals(beginLineValue)) {
+                    if (beginLineValue.startsWith("indent")) {
+                        sb.append("\t");
+                    } else {
                         sb.append(" ");
                     }
+                } else {
+                    sb.append(" ");
                 }
                 return;
             }

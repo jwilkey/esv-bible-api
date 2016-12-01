@@ -1,0 +1,23 @@
+<!DOCTYPE crossway-bible SYSTEM "http://www.gnpcb.org/esv/share/schemas/crossway.base.entities.dtd">
+<crossway-bible class="passage-query">
+<passage>
+  <reference>1 Thessalonians 1:1-2</reference>
+  <surrounding-chapters>
+    <previous>Colossians 4</previous>
+    <current>1 Thessalonians 1</current>
+    <next>1 Thessalonians 2</next>
+  </surrounding-chapters>
+  <content>
+<verse-unit unit-id="52001001"><marker class="begin-verse" mid="v52001001"/>
+<begin-chapter num="1"/><heading>Greeting</heading>
+<begin-paragraph class="chapter-first"/><verse-num begin-chapter="1">1</verse-num>Paul, Silvanus, and Timothy,<end-paragraph/>
+<begin-paragraph/>To the church of the Thessalonians in God the Father and the Lord Jesus Christ:<end-paragraph/>
+<begin-paragraph/>Grace to you and peace.<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="52001002"><marker class="begin-verse" mid="v52001002"/><heading>The Thessalonians&apos; Faith and Example</heading>
+<begin-paragraph class="chapter-first"/><verse-num>2</verse-num>We give thanks to God always for all of you, constantly<footnote id="f1">Or <i>without ceasing</i></footnote> mentioning you in our prayers,<end-paragraph/>
+</verse-unit>
+  </content>
+</passage>
+<copyright>The Holy Bible, English Standard Version copyright (c)2001 by Crossway Bibles, a division of Good News Publishers. Used by permission. All rights reserved. http://www.esv.org</copyright>
+</crossway-bible>

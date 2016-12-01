@@ -32,7 +32,7 @@ public class PassageMapper {
         text = text.replaceAll("“", "\"");
         text = text.replaceAll("”", "\"");
 
-        text = removeNode("bp", text, false);
+        text = replaceNode("bp", " ", text);
         text = removeNode("ep", text, false);
 
         text = removeNode("woc", text, true);
@@ -57,5 +57,10 @@ public class PassageMapper {
             String regex = "<" + nodeName + ">*.</" + nodeName + ">";
             return text.replaceAll(regex, "");
         }
+    }
+
+    private String replaceNode(String nodeName, String replacement, String text) {
+        String regex = "<" + nodeName + ">*.</" + nodeName + ">";
+        return text.replaceAll(regex, replacement);
     }
 }

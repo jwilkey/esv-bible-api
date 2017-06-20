@@ -1,5 +1,6 @@
 package com.tentkeep.esv.bible.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.tentkeep.esv.bible.models.PassageQuery;
 
 import javax.persistence.*;
@@ -23,6 +24,7 @@ public class Verse {
     private String subheading;
     @OneToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private List<VerseFootnote> footnotes;
+    @JsonIgnore
     private Date expiration;
 
     public Verse() {}

@@ -55,6 +55,7 @@ public class PassageQuery {
         @Root(name = "verse-unit", strict = false)
         @Convert(VerseUnitConverter.class)
         public static class VerseUnit {
+            private int chapter;
             private int number;
             private String text;
             private String heading;
@@ -63,6 +64,14 @@ public class PassageQuery {
 
             public VerseUnit() {
                 this.footnotes = new ArrayList<>();
+            }
+
+            public int getChapter() {
+                return chapter;
+            }
+
+            public void setChapter(int chapter) {
+                this.chapter = chapter;
             }
 
             public int getNumber() {

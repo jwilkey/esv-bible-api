@@ -8,6 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class VerseUnitConverter implements Converter<PassageQuery.Passage.VerseUnit> {
+
+    private static int currentChapter = 0;
+
     @Override
     public PassageQuery.Passage.VerseUnit read(InputNode node) throws Exception {
         PassageQuery.Passage.VerseUnit verseUnit = new PassageQuery.Passage.VerseUnit();
@@ -24,10 +27,17 @@ public class VerseUnitConverter implements Converter<PassageQuery.Passage.VerseU
     }
 
     private void readVerseUnitNode(StringBuilder sb, InputNode root, PassageQuery.Passage.VerseUnit verseUnit, boolean ignoreRootNodeName) throws Exception {
-        List<String> ignoreNodes = Arrays.asList("marker", "begin-chapter", "end-chapter", "begin-block-indent", "end-block-indent", "end-line");
+        List<String> ignoreNodes = Arrays.asList("marker", "end-chapter", "begin-block-indent", "end-block-indent", "end-line");
         if (ignoreNodes.contains(root.getName())) return;
 
         if (!ignoreRootNodeName) {
+            if ("begin-chapter".equals(root.getName())) {
+                currentChapter = Integer.parseInt(root.getAttribute("num").getValue());
+                return;
+            }
+
+            verseUnit.setChapter(currentChapter);
+
             if ("verse-num".equals(root.getName())) {
                 verseUnit.setNumber(Integer.parseInt(root.getValue()));
                 return;
@@ -111,7 +121,8 @@ public class VerseUnitConverter implements Converter<PassageQuery.Passage.VerseU
 
         StringBuilder footnoteSb = new StringBuilder();
         concatNodesTree(footnoteSb, root, false);
-        verseUnit.getFootnotes().add(new PassageQuery.Passage.VerseUnit.Footnote(footnoteId,footnoteSb.toString()));
+        String footnoteText = footnoteSb.toString().replace("<i>", "\"").replace("</i>", "\"");
+        verseUnit.getFootnotes().add(new PassageQuery.Passage.VerseUnit.Footnote(footnoteId, footnoteText));
     }
 
     private String getNodeName(String xmlName) {

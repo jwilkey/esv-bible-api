@@ -31,13 +31,15 @@ public class PassageMapper {
     private String applyOptions(String text, VerseOptions options) {
         text = text.replaceAll("“", "\"");
         text = text.replaceAll("”", "\"");
+        text = text.replaceAll("‘", "'");
+        text = text.replaceAll("’", "'");
 
         text = replaceNode("bp", " ", text);
         text = removeNode("ep", text, false);
 
         text = removeNode("woc", text, true);
 
-        text = removeNode("f", text, false);
+//        text = removeNode("f", text, false);
 
         text = text.trim();
 

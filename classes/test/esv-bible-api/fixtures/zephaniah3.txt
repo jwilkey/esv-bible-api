@@ -1,0 +1,96 @@
+<!DOCTYPE crossway-bible SYSTEM "http://www.gnpcb.org/esv/share/schemas/crossway.base.entities.dtd">
+<crossway-bible class="passage-query">
+<passage>
+  <reference>Zephaniah 3:10-20</reference>
+  <surrounding-chapters>
+    <previous>Zephaniah 2</previous>
+    <current>Zephaniah 3</current>
+    <next>Haggai 1</next>
+  </surrounding-chapters>
+  <content>
+<verse-unit unit-id="36003010">
+<begin-block-indent/>
+<begin-paragraph class="line-group"/><marker class="begin-verse" mid="v36003010"/>
+<begin-line/><verse-num>10</verse-num>From beyond the rivers of Cush<end-line class="br"/>
+<begin-line class="indent"/>my worshipers, the daughter of my dispersed ones,<end-line class="br"/>
+<begin-line class="indent"/>shall bring my offering.<end-line/>
+<end-paragraph/>
+</verse-unit>
+<verse-unit unit-id="36003011"><marker class="begin-verse" mid="v36003011"/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>11</verse-num>&ldblquot;On that day you shall not be put to shame<end-line class="br"/>
+<begin-line class="indent"/>because of the deeds by which you have rebelled against me;<end-line class="br"/>
+<begin-line/>for then I will remove from your midst<end-line class="br"/>
+<begin-line class="indent"/>your proudly exultant ones,<end-line class="br"/>
+<begin-line/>and you shall no longer be haughty<end-line class="br"/>
+<begin-line class="indent"/>in my holy mountain.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="36003012"><marker class="begin-verse" mid="v36003012"/>
+<begin-line/><verse-num>12</verse-num>But I will leave in your midst<end-line class="br"/>
+<begin-line class="indent"/>a people humble and lowly.<end-line class="br"/>
+<begin-line/>They shall seek refuge in the name of the <span class="divine-name">Lord</span>,<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="36003013"><marker class="begin-verse" mid="v36003013"/>
+<begin-line class="indent"/><verse-num>13</verse-num>those who are left in Israel;<end-line class="br"/>
+<begin-line/>they shall do no injustice<end-line class="br"/>
+<begin-line class="indent"/>and speak no lies,<end-line class="br"/>
+<begin-line/>nor shall there be found in their mouth<end-line class="br"/>
+<begin-line class="indent"/>a deceitful tongue.<end-line class="br"/>
+<begin-line/>For they shall graze and lie down,<end-line class="br"/>
+<begin-line class="indent"/>and none shall make them afraid.&rdblquot;<end-line/>
+<end-paragraph/>
+<end-block-indent/>
+</verse-unit>
+<verse-unit unit-id="36003014"><marker class="begin-verse" mid="v36003014"/><heading>Israel&apos;s Joy and Restoration</heading>
+<begin-block-indent/>
+<begin-paragraph class="line-group"/>
+<begin-line/><verse-num>14</verse-num>Sing aloud, O daughter of Zion;<end-line class="br"/>
+<begin-line class="indent"/>shout, O Israel!<end-line class="br"/>
+<begin-line/>Rejoice and exult with all your heart,<end-line class="br"/>
+<begin-line class="indent"/>O daughter of Jerusalem!<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="36003015"><marker class="begin-verse" mid="v36003015"/>
+<begin-line/><verse-num>15</verse-num>The <span class="divine-name">Lord</span> has taken away the judgments against you;<end-line class="br"/>
+<begin-line class="indent"/>he has cleared away your enemies.<end-line class="br"/>
+<begin-line/>The King of Israel, the <span class="divine-name">Lord</span>, is in your midst;<end-line class="br"/>
+<begin-line class="indent"/>you shall never again fear evil.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="36003016"><marker class="begin-verse" mid="v36003016"/>
+<begin-line/><verse-num>16</verse-num>On that day it shall be said to Jerusalem:<end-line class="br"/>
+<begin-line/>&ldblquot;Fear not, O Zion;<end-line class="br"/>
+<begin-line class="indent"/>let not your hands grow weak.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="36003017"><marker class="begin-verse" mid="v36003017"/>
+<begin-line/><verse-num>17</verse-num>The <span class="divine-name">Lord</span> your God is in your midst,<end-line class="br"/>
+<begin-line class="indent"/>a mighty one who will save;<end-line class="br"/>
+<begin-line/>he will rejoice over you with gladness;<end-line class="br"/>
+<begin-line class="indent"/>he will quiet you by his love;<end-line class="br"/>
+<begin-line/>he will exult over you with loud singing.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="36003018"><marker class="begin-verse" mid="v36003018"/>
+<begin-line/><verse-num>18</verse-num>I will gather those of you who mourn for the festival,<end-line class="br"/>
+<begin-line class="indent"/>so that you will no longer suffer reproach.<footnote id="f1">The meaning of the Hebrew is uncertain</footnote><end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="36003019"><marker class="begin-verse" mid="v36003019"/>
+<begin-line/><verse-num>19</verse-num>Behold, at that time I will deal<end-line class="br"/>
+<begin-line class="indent"/>with all your oppressors.<end-line class="br"/>
+<begin-line/>And I will save the lame<end-line class="br"/>
+<begin-line class="indent"/>and gather the outcast,<end-line class="br"/>
+<begin-line/>and I will change their shame into praise<end-line class="br"/>
+<begin-line class="indent"/>and renown in all the earth.<end-line class="br"/>
+</verse-unit>
+<verse-unit unit-id="36003020"><marker class="begin-verse" mid="v36003020"/>
+<begin-line/><verse-num>20</verse-num>At that time I will bring you in,<end-line class="br"/>
+<begin-line class="indent"/>at the time when I gather you together;<end-line class="br"/>
+<begin-line/>for I will make you renowned and praised<end-line class="br"/>
+<begin-line class="indent"/>among all the peoples of the earth,<end-line class="br"/>
+<begin-line/>when I restore your fortunes<end-line class="br"/>
+<begin-line class="indent"/>before your eyes,&rdblquot; says the <span class="divine-name">Lord</span>.<end-line/>
+<end-paragraph/>
+<end-block-indent/>
+<end-chapter/>
+</verse-unit>
+  </content>
+</passage>
+<copyright>The Holy Bible, English Standard Version copyright (c)2001 by Crossway Bibles, a division of Good News Publishers. Used by permission. All rights reserved. http://www.esv.org</copyright>
+</crossway-bible>

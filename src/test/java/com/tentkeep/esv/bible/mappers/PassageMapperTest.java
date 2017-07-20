@@ -32,4 +32,24 @@ public class PassageMapperTest {
                 "But Jesus, knowing their thoughts, said, \"Why do you think evil in your hearts?"
         );
     }
+
+    @Test
+    public void map_paragraphMarkings() {
+        fail("test me!");
+    }
+
+    @Test
+    public void map_footnotes() {
+        fail("test me!");
+    }
+
+    @Test
+    public void map_wordsOfChrist() {
+        fail("test me!");
+    }
+
+    @Test
+    public void map_formatting() {
+        fail("test me!");
+    }
 }

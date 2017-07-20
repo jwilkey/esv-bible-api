@@ -66,6 +66,13 @@ public class PassageQuery {
                 this.footnotes = new ArrayList<>();
             }
 
+            public VerseUnit(int chapter, int number, String text) {
+                this.chapter = chapter;
+                this.number = number;
+                this.text = text;
+                this.footnotes = new ArrayList<>();
+            }
+
             public int getChapter() {
                 return chapter;
             }

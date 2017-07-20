@@ -78,6 +78,10 @@ public class Verse {
         return heading;
     }
 
+    public void setHeading(String heading) {
+        this.heading = heading;
+    }
+
     public String getSubheading() {
         return subheading;
     }

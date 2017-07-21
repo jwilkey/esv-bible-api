@@ -33,7 +33,7 @@ class BiblesHelper {
 
         return response.response.verses.map { v ->
             var cleanText = v.text.replace("<sup[\\S\\s]*</sup>".toRegex(), "")
-            cleanText = cleanText.replace("<h3[\\S\\s]*</h3>".toRegex(), "")
+            cleanText = cleanText.replace("<h\\d[\\S\\s]*</h\\d>".toRegex(), "")
             cleanText = cleanText.replace("\n", "")
             cleanText = cleanText.replace("<p class=\"q\">([\\S\\s]*)</p>".toRegex(), " \"$1\"")
             cleanText = cleanText.replace("<[^>]*>".toRegex(), "")

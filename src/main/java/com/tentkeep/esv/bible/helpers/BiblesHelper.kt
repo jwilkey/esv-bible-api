@@ -32,14 +32,17 @@ class BiblesHelper {
                 .execute().body()
 
         return response.response.verses.map { v ->
-            var cleanText = v.text.replace("[\\S\\s]*</sup>".toRegex(), "")
-            cleanText = cleanText.substring(0, cleanText.lastIndexOf("</"))
+            var cleanText = v.text.replace("<sup[\\S\\s]*</sup>".toRegex(), "")
+            cleanText = cleanText.replace("<h3[\\S\\s]*</h3>".toRegex(), "")
+            cleanText = cleanText.replace("\n", "")
+            cleanText = cleanText.replace("<p class=\"q\">([\\S\\s]*)</p>".toRegex(), " \"$1\"")
+            cleanText = cleanText.replace("<[^>]*>".toRegex(), "")
 
             val pattern = Pattern.compile("<h3.*>(.*?)</h3>")
             val matcher = pattern.matcher(v.text)
             val header = if (matcher.find()) matcher.group(1) else null
 
-            val verse = Verse(book, PassageQuery.Passage.VerseUnit(Integer.parseInt(chapter), Integer.parseInt(v.verse), cleanText))
+            val verse = Verse(book, PassageQuery.Passage.VerseUnit(Integer.parseInt(chapter), Integer.parseInt(v.verse), cleanText.trim()))
             verse.heading = header
             verse
         }

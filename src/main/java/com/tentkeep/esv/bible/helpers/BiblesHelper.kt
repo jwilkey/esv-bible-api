@@ -50,7 +50,7 @@ class BiblesHelper {
 
     private fun convertTranslation(translation: String): String? {
         val translations: HashMap<String, String> = hashMapOf("rvr60" to "spa-RVR1960")
-        return translations[translation.toLowerCase()]
+        return translations[translation.toLowerCase()] ?: translation
     }
 
     private fun convertBook(book: String): String? {
@@ -68,6 +68,6 @@ class BiblesHelper {
                 "1thessalonians" to "1Thess", "2thessalonians" to "2Thess", "1timothy" to "1Tim", "2timothy" to "2Tim",
                 "titus" to "Titus", "philemon" to "Phlm", "hebrews" to "Heb", "james" to "Jas", "1peter" to "1Pet",
                 "2peter" to "2Pet", "1john" to "1John", "2john" to "2John", "3john" to "3John", "jude" to "Jude", "revelation" to "Rev")
-        return books[book.toLowerCase()]
+        return books[book.toLowerCase()] ?: book
     }
 }
